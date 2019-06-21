@@ -6,9 +6,61 @@
     <title>CS193x Final Project</title>
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/script.js" defer></script>
-    </script>
+    <script src="js/firstScreen.js"></script>
+    <script src="js/secondScreen.js"></script>
+    <script src="js/page.js"></script>
   </head>
   <body>
-    <!-- TODO(you): Add the HTML necessary to complete your final project. -->
+  <div id="first">
+    <div class="container">
+      <div class="top">明日方舟—攻略影片彙整</div>
+      <div class="main">
+        <div class="left">
+          <button class="button" id="S1"><span>2-1</span></button>
+          <button class="button" id="S2"><span>2-2</span></button>
+          <button class="button" id="S3"><span>2-3</span></button>
+          <button class="button" id="S4"><span>2-4</span></button>
+          <button class="button" id="S5"><span>2-5</span></button>
+          <button class="button" id="S6"><span>2-6</span></button>
+          <button class="button" id="S7"><span>2-7</span></button>
+          <button class="button" id="S8"><span>2-8</span></button>
+          <button class="button" id="S9"><span>2-9</span></button>
+          <button class="button" id="S10"><span>2-10</span></button>
+        </div>
+        <div class="right">
+          <div class="head"><p>攻略影片列表</p></div>
+          <div class="body" id="output"></div>
+        </div>
+      </div>
+      <div class="down">
+        <form>
+          <label>選擇地圖：
+            <select id="stage" style="font-size: 2rem">
+              <option>2-1</option>
+              <option>2-2</option>
+              <option>2-3</option>
+              <option>2-4</option>
+              <option>2-5</option>
+              <option>2-6</option>
+              <option>2-7</option>
+              <option>2-8</option>
+              <option>2-9</option>
+              <option>2-10</option>
+            </select>
+          </label>
+          <label>攻略網址：
+            <input id="link" style="font-size: 2rem">
+          </label>
+          <label><button type="submit">新增攻略</button></label>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="second" class="inactive">
+    <div class="result">
+      <p style="font-size: 5rem" id="PostResult">新增成功！！！</p>
+      <button id="back" style="font-size: 3.5rem">返回</button>
+    </div>
+  </div>
   </body>
 </html>
