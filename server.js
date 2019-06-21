@@ -29,7 +29,6 @@ app.get('/api', onGet);
 
 async function onPost(req, res){
   const target = req.body;
-    const result = await sheet.getRows();
   var ans=[target.stage , target.link];
   console.log(ans);
   sheet.appendRow(ans);

@@ -12,6 +12,30 @@ const PageControl = new Page();
             {
                 List.removeChild(List.firstChild);
             }
+            for (var i =1 ; i<jason.length ; i++) {
+                if (STG == jason[i][0]) {
+                    var frame = document.createElement("iframe");
+                    var S1=jason[i][1];
+                    var numg=S1.match(/\d+/g);
+                    var aid,pg;
+                    aid=numg[0];
+                    if(numg[1]!=null)
+                        pg=numg[1];
+                    else
+                        pg=1;
+                    Src="//player.bilibili.com/player.html?aid="+aid+"&page="+pg+"";
+                    frame.setAttribute("src",Src);
+                    frame.setAttribute("scrolling","no");
+                    frame.setAttribute("border","0");
+                    frame.setAttribute("frameborder","0");
+                    frame.setAttribute("width","auto");
+                    frame.setAttribute("height","500");
+                    frame.setAttribute("framespacing","0");
+                    frame.setAttribute("allowfullscreen","true");
+                    List.appendChild(frame);
+                    break;
+                }
+            }
             for (var i =1 ; i<jason.length ; i++)
             {
                 if(STG == jason[i][0])
