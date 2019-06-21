@@ -23,7 +23,7 @@ const PageControl = new Page();
                         pg=numg[1];
                     else
                         pg=1;
-                    Src="https://player.bilibili.com/player.html?aid="+aid+"&page="+pg+"";
+                    Src="//player.bilibili.com/player.html?aid="+aid+"&page="+pg+"";
                     frame.setAttribute("src",Src);
                     frame.setAttribute("scrolling","no");
                     frame.setAttribute("border","0");
