@@ -13,7 +13,7 @@ const PageControl = new Page();
                 List.removeChild(List.firstChild);
             }
             for (var i =1 ; i<jason.length ; i++) {
-                if (STG == jason[i][0]) {
+                if (STG === jason[i][0]) {
                     var frame = document.createElement("iframe");
                     var S1=jason[i][1];
                     var numg=S1.match(/\d+/g);
@@ -23,7 +23,7 @@ const PageControl = new Page();
                         pg=numg[1];
                     else
                         pg=1;
-                    Src="//player.bilibili.com/player.html?aid="+aid+"&page="+pg+"";
+                    Src="http://player.bilibili.com/player.html?aid="+aid+"&page="+pg+"";
                     frame.setAttribute("src",Src);
                     frame.setAttribute("scrolling","no");
                     frame.setAttribute("border","0");
@@ -38,7 +38,7 @@ const PageControl = new Page();
             }
             for (var i =1 ; i<jason.length ; i++)
             {
-                if(STG == jason[i][0])
+                if(STG === jason[i][0])
                 {
                     var par = document.createElement("p");
                     var ach = document.createElement("a");
