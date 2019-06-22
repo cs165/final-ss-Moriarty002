@@ -12,6 +12,10 @@ const PageControl = new Page();
             {
                 List.removeChild(List.firstChild);
             }
+            while (Video.hasChildNodes())
+            {
+                Video.removeChild(Video.firstChild);
+            }
             for (var ii =1 ; ii<jason.length ; ii++) {
                 if (STG === jason[ii][0]) {
                     var frame = document.createElement("iframe");
