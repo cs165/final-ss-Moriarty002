@@ -107,11 +107,12 @@
     margin:0;
 }
 .main .right .body{
-    height: 85%;
+    height: 42.5%;
     align-content:flex-start ;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 
 }
 .main .right .body p{

@@ -12,10 +12,10 @@ const PageControl = new Page();
             {
                 List.removeChild(List.firstChild);
             }
-            for (var i =1 ; i<jason.length ; i++) {
-                if (STG === jason[i][0]) {
+            for (var ii =1 ; ii<jason.length ; ii++) {
+                if (STG === jason[ii][0]) {
                     var frame = document.createElement("iframe");
-                    var S1=jason[i][1];
+                    var S1=jason[ii][1];
                     var numg=S1.match(/\d+/g);
                     var aid,pg;
                     aid=numg[0];
@@ -29,10 +29,10 @@ const PageControl = new Page();
                     frame.setAttribute("border","0");
                     frame.setAttribute("frameborder","0");
                     frame.setAttribute("width","auto");
-                    frame.setAttribute("height","500");
+                    frame.setAttribute("height","100%");
                     frame.setAttribute("framespacing","0");
                     frame.setAttribute("allowfullscreen","true");
-                    List.appendChild(frame);
+                    Video.appendChild(frame);
                     break;
                 }
             }
@@ -69,27 +69,28 @@ const PageControl = new Page();
         }
     }
 
-    var Stage=document.querySelectorAll(".button");
+    var Stage =document.querySelectorAll(".button");
     for (var i of Stage)
         i.addEventListener('click',choose);
     var formElement = document.querySelector('form');
     formElement.addEventListener('submit',onSubmit);
-    var Stage = document.querySelector('#stage');
+    var stage = document.querySelector('#stage');
     var Link = document.querySelector('#link');
     var List = document.querySelector('#output');
+    var Video = document.querySelector('#video');
 
     function choose()  //get
     {
         var text=event.target.textContent;
-        var method={method: "GET"}
+        var method={method: "GET"};
         test('/api',method,text,null);
     }
     function onSubmit() //post
     {
         event.preventDefault();
-        var text='2-'+(Stage.selectedIndex+1);
+        var text='2-'+(stage.selectedIndex+1);
         var link=Link.value;
-        var method={method: "POST"}
+        var method={method: "POST"};
         test('/api',method,text,link);
         PageControl.toSecond();
     }
